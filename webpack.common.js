@@ -5,15 +5,13 @@ module.exports = {
   /* here you can define another js file */
   entry: {
     index: "./src/js/index.js",
-    another: "./src/js/another.js",
   },
   output: {
     filename: "[name].[hash:8].js",
     path: __dirname + "/dist",
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: [/.js$/],
         exclude: /(node_modules)/,
         use: {
@@ -29,14 +27,12 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "img/[name].[hash:8].[ext]",
-            },
+        use: [{
+          loader: "file-loader",
+          options: {
+            name: "img/[name].[hash:8].[ext]",
           },
-        ],
+        }, ],
       },
     ],
   },
@@ -47,7 +43,9 @@ module.exports = {
 
   plugins: [
     new CopyWebpackPlugin({
-      patterns: [{ from: "public" }],
+      patterns: [{
+        from: "public"
+      }],
     }),
 
     /* here you can define another html file and its dependencies */
@@ -58,10 +56,22 @@ module.exports = {
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/pages/another.html",
+      template: "./src/pages/html-page.html",
       inject: true,
-      chunks: ["index", "another"],
-      filename: "another.html",
+      chunks: ["index"],
+      filename: "html-page.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/css-page.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "css-page.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/js-page.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "js-page.html",
     }),
   ],
 };

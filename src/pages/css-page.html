@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTF - Łukasz Klekner</title>
+</head>
+
+<body>
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a class="navigation__link" href="index.html">Homepage</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="html-page.html">HTML</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="css-page.html">CSS</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="js-page.html">JS</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+    <main class="main">
+      <header class="header">
+        <h1 class="header__title">CSS</h1>
+        <img class="header__logo" src="../assets/img/css3-logo.png" alt="CSS3 logo" />
+      </header>
+
+      <section class="section">
+        <h2 class="section__title">Czego dowiesz się o CSS3...</h2>
+
+        <div class="grid">
+          <article class="article">
+            <header class="article__header">
+              <h3 class="article__title">Lekcja 1: Co to jest CSS?</h3>
+              <p class="article__subtitle">
+                Pierwsze selektory i stylowanie strony
+              </p>
+            </header>
+
+            <p class="article__description">CSS = Cascading Style Sheets:</p>
+            <ul class="article__list">
+              <li class="article__item">odpowiada za prezentację</li>
+              <li class="article__item">
+                wpływa na wygląd elementów HTML na ekranie, wydrukach, itp.
+              </li>
+              <li class="article__item">składnia CSS to reguły</li>
+            </ul>
+            <p class="article__description">
+              Budowa reguły: <br />
+              selektor { <br />
+              właściwość: wartość; <br />
+              }
+            </p>
+            <p class="article__description">Jak dołączyć plik css?</p>
+            <ol class="article__list">
+              <li class="article__item">Znacznik style wewnątrz head'a</li>
+              <li class="article__item">
+                Podlinkowanie pliku stylów do html <br />
+                <code>&lt;link href="" rel="stylesheet" type="text/css" &gt;</code>
+              </li>
+              <li class="article__item">
+                Inline style - o tym więcej w
+                <a class="article__link" href="#inline-style">lekcji nr 2</a>
+              </li>
+            </ol>
+          </article>
+
+          <article class="article">
+            <h3 class="article__title">
+              Lekcja 2: Klasy, identyfikatory i specyficzność
+            </h3>
+
+            <p class="article__description" id="inline-style">
+              Style CSS można też dołączać w znacznikach HTML - choć jest to zła
+              praktyka. <br />
+              &lt;zniacznik style="color:yellow;"&gt;treść&lt;/znacznik&gt;
+            </p>
+
+            <p class="article__description">Selektory wyboru:</p>
+            <ul class="article__list">
+              <li class="article__item">klasy - .nazwa-klasy</li>
+              <li class="article__item">identyfikatora - #nazwa-id</li>
+            </ul>
+            <p class="article__description">
+              !important nadpisuje każdy styl, np: color:blue !important;
+            </p>
+            <p class="article__description">
+              Specyficzność w CSS - klasyfikacja medalowa
+            </p>
+            <img class="article__image" src="../assets/img/specyficznosc-css.png"
+              alt="Zdjęcię uporządkowanej specyficzności w CSS" />
+            <p class="article__description">Oto kilka przykładów:</p>
+            <img class="article__image" src="../assets/img/example-1.png" alt="Specyficzność - przykład nr 1" />
+            <img class="article__image" src="../assets/img/example-2.png" alt="Specyficzność - przykład nr 2" />
+
+            <p class="article__description">
+              Rekomendowane jest dodawanie klas do wszystkich elementów i
+              unikanie zagnieżdżeń.
+            </p>
+            <p class="article__description">Nazewnictwo klas:</p>
+            <ul class="article__list">
+              <li class="article__item">
+                używaj pojedynczych słów z j.angielskiego
+              </li>
+              <li class="article__item">
+                nazywaj rzeczy zgodnie z ich funkcją na stronie
+              </li>
+              <li class="article__item">startuj z małej litery</li>
+              <li class="article__item">nie zaczynaj od cyfr</li>
+              <li class="article__item">
+                jeśli musisz użyć dwóch słów użyj tzw. kebab-case
+              </li>
+              <li class="article__item">
+                staraj się, żeby element miał jedną klasę (nie zwiększaj
+                sepcyficzności bez potrzeby)
+              </li>
+            </ul>
+
+            <p class="article__description">Podsumowanie:</p>
+            <ul class="article__list">
+              <li class="article__item">html class="name" = css .name</li>
+              <li class="article__item">html id="name" = css #name</li>
+              <li class="article__item">
+                stylujemy po klasach (bez zagnieżdżeń)
+              </li>
+              <li class="article__item">
+                nazwy klas po angielsku zgodnie z przeznaczeniem
+              </li>
+              <li class="article__item">
+                tworzymy klasy nawet jeśli mamy jeden element danego typu
+              </li>
+              <li class="article__item">specyficzność może dać popalić</li>
+              <li class="article__item">
+                nie używamy !important i stylów inline'owych
+              </li>
+            </ul>
+          </article>
+
+          <article class="article">
+            <header class="article__header">
+              <h3 class="article__title">Lekcja 3: Box Model</h3>
+              <p class="article__subtitle">Życie w pudełku</p>
+            </header>
+            <p class="article__description">
+              <code> &lt; div &gt; </code> używamy tylko i wyłącznie, gdy chcemy
+              coś "opakować" tzn. nie istnieje odpowiedni semantyczny znacznik
+            </p>
+            <p class="article__description">Właściwość display:</p>
+            <ul class="article__list">
+              <li class="article__item">
+                <code>display: block;</code> - elementy ustawiają się pod sobą,
+                możemy określić wymiary boxa
+              </li>
+              <li class="article__item">
+                <code>display: inline;</code> - elementy ustawiają się obok
+                siebie, zajmują tyle miejsca co ich treść, nie możemy ustawić
+                wymiarów boxa
+              </li>
+              <li class="article__item">
+                <code>display: inline-block;</code> - elementy ustawiają się
+                obok siebie, ale tym razem możemy nadać wymiary boxowi
+              </li>
+              <li class="article__item">
+                <code>display: auto</code> - jeśli treść nie mieści się w boxie,
+                to automatycznie jest dodawany scroller
+              </li>
+            </ul>
+            <p class="article__description">
+              Do ustawiania wymiarów boxa można korzystać z bardzo użytecznyxch
+              właściwości: <code>min-width</code> & <code>max-width</code>.
+            </p>
+            <p class="article__description">
+              <code>overflow: hidden;</code> - pozwala na ukrywanie treści,
+              która nie mieści się w boxie
+            </p>
+            <p class="article__description">Box model:</p>
+            <ul class="article__list">
+              <li class="article__item">margin</li>
+              <li class="article__item">border</li>
+              <li class="article__item">padding</li>
+              <li class="article__item">content</li>
+            </ul>
+            <p><code>border-radius: __px;</code> - zaokrągla rogi ramki</p>
+            <p>
+              <code>margin: __px auto;</code> - wyśrodkowuje box, ale pod
+              warunkiem, że element ma już ustaloną szerokość
+            </p>
+            <p>
+              <code>box-sizing: content-box;</code> - domyślnie, nie uwzględnia
+              paddingu i marginesów w szerokości i wysokości
+            </p>
+            <p>
+              <code>box-sizing: border-box;</code> - uwzględnia paddingu i
+              marginesów w szerokości i wysokości
+            </p>
+            <p class="article__description">Pozycjonowanie:</p>
+            <ul class="article__list">
+              <li class="article__item">
+                <code>position: static;</code> - domyślnie
+              </li>
+              <li class="article__item">
+                <code>position: relative;</code> - pozycjonowanie względem
+                wybranego elementu
+              </li>
+              <li class="article__item">
+                <code>position: absolute;</code> - pozycjonowanie wzgledem okna
+                przeglądarki, nie ma szerokości tak jak inline
+              </li>
+              <li class="article__item">
+                <code>position: fixed;</code> - działa podobnie do absolute,
+                tylko jest przyklejony do strony
+              </li>
+              <li class="article__item">
+                <code>position: sticky; - jest przyklejony, ale tylko w obrębie
+                  danego elementu</code>
+              </li>
+            </ul>
+            <p class="article__description">
+              Float - nie służy do budowania layotów, tylko do opływania
+              elementów, gdy nie ma wysokości to sprawia straszne problemy, gdyż
+              nie widzi innych elementów
+            </p>
+            <p class="article__description">
+              <code>clear: both;</code> - służy do czyszczenia floata
+            </p>
+          </article>
+
+          <article class="article">
+            <header class="article__header">
+              <h3 class="article__title">Lekcja 4: Metodologia BEM</h3>
+              <p class="article__subtitle">Block__Element--Modifier</p>
+            </header>
+
+            <p class="article__description">
+              Rozwinięcie skrótu BEM wraz z definicjami
+            </p>
+            <ul class="article__list">
+              <li class="article__item">Block - element nadrzędny</li>
+              <li class="article__item">
+                Element - część bloku (nie musi być bezpośrednim dzieckiem)
+              </li>
+              <li class="article__item">
+                Modifier - modyfikator, jeśli element występuje w kilku
+                wariacjach tworzymy dodatkową klasę
+              </li>
+            </ul>
+            <p class="article__description">Przykład:</p>
+            <pre>
+            &lt;div class="hand"&gt;
+               &lt;div class="hand__finger hand__finger--thumb"&gt;&lt;/div &gt;
+               &lt;div class="hand__finger"&gt;&lt;/div &gt;
+               &lt;div class="hand__finger"&gt;&lt;/div &gt;
+               &lt;div class="hand__finger"&gt;&lt;/div &gt;
+               &lt;div class="hand__finger hand__finger--pinky"&gt;&lt;/div &gt;
+            &lt;/div &gt;
+          </pre>
+
+            <p class="article__description">Podsumowanie:</p>
+            <ul class="article__list">
+              <li class="article__item">
+                szukamy elementów na stronie i dzielimy ją na bloki
+              </li>
+              <li class="article__item">
+                myślimy o elementach składowych/robumy analizę-selekcję
+              </li>
+              <li class="article__item">
+                tworzymy dwie klasy jeśli element ma modyfikator (w
+                modyfikatorze zmieniamy tylko unikalne dla niego wartości, nie
+                przypisujemy rzeczy z klasy bazowej
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    Strona domowa Łukasza Klekner - uczesnitka 2-ej edycji szkolenia WTF: Co
+    ten frontend.
+  </footer>
+</body>
+
+</html>

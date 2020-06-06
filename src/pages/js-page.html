@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WTF - Łukasz Klekner</title>
+</head>
+
+<body>
+  <nav class="navigation">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a class="navigation__link" href="index.html">Homepage</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="html-page.html">HTML</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="css-page.html">CSS</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="js-page.html">JS</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+    <main class="main">
+      <header class="header">
+        <h1 class="header__title">JavaScript</h1>
+        <img class="header__logo" src="../assets/img/js-logo.png" alt="JS logo" />
+      </header>
+
+      <section class="section">
+        <h2 class="section__title">Czego dowiesz się o JS i ECMAScript...</h2>
+
+        <div class="grid">
+          <article class="article">
+            <header class="article__header">
+              <h3 class="article__title">
+                Lekcja 1: Co to jest JS i ECMASctipt?
+              </h3>
+              <p class="article__subtitle">Console.log i zmienne...</p>
+            </header>
+
+            <p class="article__description">JavaScript:</p>
+            <ul class="article__list">
+              <li class="article__item">odpowiada za interakcję</li>
+              <li class="article__item">
+                pozwala na programowanie we frontendzie
+              </li>
+              <li class="article__item">potrafi wpływać na każdą z warstw</li>
+              <li class="article__item">
+                znacznie rozszerza możliwości zwykłych stron
+              </li>
+            </ul>
+
+            <p class="article__description">ECMAScript2015+ (ES6+):</p>
+            <ul class="article__list">
+              <li class="article__item">
+                jest to ustandaryzowany przez organizację ECMA skrypt języka
+                programowania
+              </li>
+              <li class="article__item">
+                JavaScript implementuje rzeczy ze specyfikacji ECMAScript
+              </li>
+              <li class="article__item">
+                rozwój ECMAScript mocno przyspieszył przez szerokie
+                wykorzystanie JavaScript'u
+              </li>
+              <li class="article__item">
+                ES6 (i nowsze) wprowadzają wiele udogodnień dla developerów
+              </li>
+              <li class="article__item">
+                nowe feature'y mogą nie być wspierane we wszystkich
+                przeglądarkach (ale są na to sposoby)
+              </li>
+            </ul>
+            <p class="article__description">Z czego składa się JS?</p>
+            <ul class="article__list">
+              <li class="article__item">wartości</li>
+              <li class="article__item">zmienne</li>
+              <li class="article__item">operacje porównywania</li>
+              <li class="article__item">literały</li>
+              <li class="article__item">funkcje</li>
+              <li class="article__item">obiekty</li>
+            </ul>
+            <p class="article__description">
+              !Wartości w JS istnieją - my ich nie tworzymy tylko
+              <em class="article article--italic">"wpinamy się"</em> w nie.
+            </p>
+            <p class="article__description">
+              Kod js dołączamy na sammy koncu body za pomocą znacznika script
+              <br />
+              <code>&lt;script src=" "&gt; &lt;/script&gt;</code>
+            </p>
+
+            <p class="article__description">
+              <code>name = 'Lukasz'</code> - zmiennna o nazwie name, która
+              <b class="article article--bold"> łączy się</b> z wartością Lukasz
+            </p>
+
+            <p class="article__description">Pierwsze komendy w JS:</p>
+            <ul class="article__list">
+              <li class="article__item"><code>alert('Siema!')</code></li>
+              <li class="article__item"><code>console.log('Siema!')</code></li>
+              <li class="article__item">
+                <code>.log(`Nazywam się ${name} i mam {age} lat.`) -
+                  backtick/backquote</code>
+              </li>
+            </ul>
+
+            <p class="article__description">Podsumowanie:</p>
+            <ul class="article__list">
+              <li class="article__item">
+                kod JS uruchamia się raz (po załadowaniu strony)
+              </li>
+              <li class="article__item">Java != JavaScript</li>
+              <li class="article__item">
+                JS implementuje rzeczy ze specyfikacji ECMAScript
+              </li>
+              <li class="article__item">
+                JavaScript to frontendowe programowanie
+              </li>
+              <li class="article__item">
+                za pomocą JS można robić szalone rzeczy
+              </li>
+            </ul>
+          </article>
+
+          <article class="article">
+            <h3 class="article__title">Lekcja 2: Typy danych i immutability</h3>
+            <p class="article__description">
+              Zmienna to połączenie z JSowym światem wartości
+            </p>
+
+            <p class="article__description">Zmienne</p>
+            <ul class="article__list">
+              <li class="article__item">
+                const - ma stałe połączenie, którego nie możemy zmienić
+              </li>
+              <li class="article__item">
+                let - definujemy tylko raz, ale możemy "przepinać" połączenie
+              </li>
+              <li class="article__item">var - nie rekomendowana</li>
+            </ul>
+
+            <p class="article__description">
+              Zmienne w JS są jak młody pelikan: łykną wszystko.
+            </p>
+
+            <p class="article__description">Typy proste w JS (primitives)</p>
+            <ul class="article__list">
+              <li class="article__item">String</li>
+              <li class="article__item">Number</li>
+              <li class="article__item">Biging (bardzo duża liczba)</li>
+              <li class="article__item">Boolean (true, false)</li>
+              <li class="article__item">
+                Null (wartość celowo niezdefiniowana)
+              </li>
+              <li class="article__item">Undefined (brak definicji)</li>
+              <li class="article__item">
+                Symbol (tworzy "unikalne opakowanie")
+              </li>
+            </ul>
+
+            <p class="article__description">
+              typeof nazwa_zmiennej - zwraca typ zmiennej
+            </p>
+            <p class="article__description">
+              Immutability(niezmienność)- nie możemy zmienić wartości primitiv
+              values w JS. To co zmieniamy to tylko i wyłącznie połączenie.
+            </p>
+          </article>
+
+          <article class="article">
+            <h3 class="article__title">Lekcja 3: DOMowe przedszkole</h3>
+            <p class="article__description">
+              DOM - Document Object Model - struktura html w devtools
+            </p>
+            <p class="article__description">
+              <code>document.querySelektor('.class--js');</code> - zwraca
+              element(y) ze struktury DOM
+            </p>
+            <p class="article__description">
+              <code>nazwaZmiennejQuerySelektor.innerHTML='treść'</code> - edycja
+              treści wybranego elementu
+            </p>
+            <p class="article__description">
+              <code>console.log(nazwaZmiennejQuerySelektor.innerHTML)</code> -
+              wyświetla treść wybranego elementu
+            </p>
+
+            <p class="article__description">Podsumowanie:</p>
+            <ul class="article__list">
+              <li class="article__item">
+                DOM to "złożony" w przeglądarce HTML
+              </li>
+              <li class="article__item">JS może modyfikować DOM</li>
+              <li class="article__item">
+                funkcja querySelektor zwraca node(węzeł) z HTML-a, selektor jest
+                zapisywany zgodnie z CSS
+              </li>
+              <li class="article__item">
+                korzystając z BEM tworzymy dodatkową klasę z modyfikatorem --js
+                (ułatwia identyfikację/usuwa potencjalne problemy)
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    Strona domowa Łukasza Klekner - uczesnitka 2-ej edycji szkolenia WTF: Co
+    ten frontend.
+  </footer>
+</body>
+
+</html>
