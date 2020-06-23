@@ -114,6 +114,12 @@
         text-decoration: none;
         color: rgb(25, 25, 128);
         font-weight: 700;
+        transition: .5s;
+        display: inline-block;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
     }
 }
 
