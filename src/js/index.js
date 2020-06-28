@@ -30,3 +30,20 @@ const nav = document.querySelector('.navigation');
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('navigation--open');
 })
+
+fetch('https://api.github.com/users/lukasz-klekner/repos')
+    .then(resp => resp.json())
+    .then(resp => {
+        for (let repo of resp) {
+            const {
+                name,
+                html_url
+            } = repo;
+            const list = document.querySelector('.section__list--js');
+            const myTemplate = `<li class="section__item">
+            ${name} <a href="${html_url} title="Link do repozytorium ${name}>link go githuba</a>
+            </li>`;
+            list.innerHTML += myTemplate;
+        }
+    })
+    .catch(error => console.log(error))
